@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.models.Car;
+import org.example.models.MyList;
 import org.example.models.Saab;
 import org.example.models.Volvo;
 
@@ -10,7 +11,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        ex3();
+        ex4();
     }
 
     private static void ex1() {
@@ -74,5 +75,21 @@ public class App
         for (Car aCar : carHashMap.values() ) {
             System.out.println(aCar);
         }
+    }
+
+    private static void ex4() {
+        Car bmw = new Car("BMW", "525i");
+        Saab saab = new Saab("900S", 260);
+        Volvo volvo = new Volvo("740", 123);
+
+        MyList<Car> carMyList = new MyList<>();
+
+        carMyList.add(bmw);
+        carMyList.add(saab);
+        carMyList.add(volvo);
+
+        System.out.println(
+                carMyList.getByIndex(
+                        carMyList.indexOf(saab)));
     }
 }
