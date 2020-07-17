@@ -8,10 +8,12 @@ public class MyListTest {
 
     @Test
     public void add() {
+        assertEquals("ToDo", "not done!");
     }
 
     @Test
     public void remove() {
+        assertEquals("ToDo", "not done!");
     }
 
     @Test
@@ -100,9 +102,11 @@ public class MyListTest {
 
     @Test
     public void toArray() {
+        assertEquals("ToDo", "not done!");
     }
 
     @Test
     public void size() {
+        assertEquals("ToDo", "not done!");
     }
 }
