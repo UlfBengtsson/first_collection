@@ -11,7 +11,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        ex4();
+        ex1();
     }
 
     private static void ex1() {
@@ -91,5 +91,24 @@ public class App
         System.out.println(
                 carMyList.getByIndex(
                         carMyList.indexOf(saab)));
+    }
+
+    private static void ex5() {
+        MyList<Object> myObjList = new MyList<Object>();
+        MyList<Volvo> myVolvos = new MyList<>();
+        MyList<Saab> mySaabs = new MyList();
+
+        Car bmw = new Car("BMW", "525i");
+        Saab saab = new Saab("900S", 260);
+        Volvo volvo = new Volvo("740", 123);
+
+        myObjList.add(bmw);
+        myObjList.add(volvo);
+        myObjList.add(saab);
+        myObjList.add("Hello coders!");
+
+        myVolvos.add(volvo);
+
+        mySaabs.add(saab);
     }
 }
